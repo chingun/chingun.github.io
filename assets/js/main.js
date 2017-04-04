@@ -43,7 +43,7 @@
 			});
 
 		// IE<=9: Reverse order of main and sidebar.
-			if (skel.vars.IEVersion <= 9)
+			if (skel.vars.IEVersion <= 1)
 				$main.insertAfter($sidebar);
 
 		// Menu.
