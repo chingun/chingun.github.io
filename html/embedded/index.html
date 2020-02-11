@@ -115,135 +115,47 @@ body {
   opacity: 1;
   filter: alpha(opacity=100);
 }
-/* ADDITIONS for picture scrolling*/
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #FFFFFF;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #FFFFFF;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #FFFFFF;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
 </style>
 </head>
   <body>  
     <!-- Side navigation -->
     <div class="sidenav">
-      <h1 href="chingunkhasar/index.html">CHINGUN KHASAR</h1>
-      <a href="index.html">About</a><!-- 
+      <h1>CHINGUN KHASAR</h1>
+      <a href="../index.html">About</a><!-- 
        --><a class="dropdown-btn">Projects
         <i class="fa fa-caret-down"></i>
       </a>
       <div class="dropdown-container">
-        <a href="embedded/index.html">Embedded Systems</a>
-        <a href="ai/index.html">Artificial Intelligence</a>
-        <a href="apps/index.html">Mobile Applications</a>
-        </div>
-        <!-- <a href="read/index.html">Reading List</a> -->
+        <a href="index.html">Embedded Systems</a>
+        <a href="../ai/index.html">Artificial Intelligence</a>
+        <a href="../apps/index.html">Mobile Applications</a>
       </div>
+<!--       <a href="Writing/index.html">Writing</a>
+ --> 
+    </div>
+
     <div class="main">
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      </div>
-      <br>
-
+      <h1> Embedded Systems Resources </h1>
+      <a> Resources: <br> 
+      <a href='https://www.eecs.umich.edu/courses/eecs473/labs.html'>
+        The Advanced Embedded Systems</a><a>  at University of Michigan. <br>
+      <a href='http://www.kicad-pcb.org/'>
+        Kicad</a><a> : free embedded circuit design tools. <br>
+      <a href="https://www.freertos.org/">
+        FreeRtos</a><a> : free real time operating system protected under open source license. <br>
+      </a>
+      
       <div class="icons">
-        <a href="https://github.com/chingun"><img src='images/git.png' style="width:20px;height:20px;border:0;"></a>
-        <a href="https://www.linkedin.com/in/chingun-khasar-93157a11a"><img src='images/linkedin.png' style="width:20px;height:20px;border:0;"></a>
-        <a href=https://www.instagram.com/chingunkh/><img src='images/insta.png' style="width:20px;height:20px;border:0;"></a>
+        <a href="https://github.com/chingun"><img src='../images/git.png' style="width:20px;height:20px;border:0;"></a>
+        <a href="https://www.linkedin.com/in/chingun-khasar-93157a11a"><img src='../images/linkedin.png' style="width:20px;height:20px;border:0;"></a>
+        <a href=https://www.instagram.com/chingunkh/><img src='../images/insta.png' style="width:20px;height:20px;border:0;"></a>
       </div>
     </div>
 
@@ -261,33 +173,6 @@ img {vertical-align: middle;}
         dropdownContent.style.display = "block";
         }
         });
-      }
-
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
       }
     </script>
   </body>
