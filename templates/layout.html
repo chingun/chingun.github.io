@@ -264,7 +264,7 @@ img {vertical-align: middle;}
           this.classList.toggle("active");
           var dropdownContent = this.nextElementSibling;
           if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "block";
+            dropdownContent.style.display = "none";
             keep_down = false;
           } else {
             dropdownContent.style.display = "block";
@@ -274,9 +274,7 @@ img {vertical-align: middle;}
       }
 
       var slideIndex = 1;
-      
       showSlides(slideIndex);
-      
       function plusSlides(n) {
         showSlides(slideIndex += n);
       }
