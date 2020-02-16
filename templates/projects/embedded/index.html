@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 {% block content %}
-  <h1> Embedded Systems Resources </h1>
-  <a> Resources: <br> 
-  <a href='https://www.eecs.umich.edu/courses/eecs473/labs.html'>
-    The Advanced Embedded Systems</a><a>  at University of Michigan. <br>
-  <a href='http://www.kicad-pcb.org/'>
-    Kicad</a><a> : free embedded circuit design tools. <br>
-  <a href="https://www.freertos.org/">
-    FreeRtos</a><a> : free real time operating system protected under open source license. <br>
-  </a>
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+  <img src="{{posts.image_link}}" style="width:100%">
+  <div class="text"></div>
+  </div>
+  </div>
+  <h1> {{ posts.title }} </h1>
+  {% for post in posts.each_posts %}    
+    <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
+  {% endfor %}
 {% endblock %}

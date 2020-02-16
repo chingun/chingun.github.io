@@ -2,12 +2,12 @@
 {% block content %}
   <div class="slideshow-container">
   <div class="mySlides fade">
-  <img src="static/aigif.gif" style="width:100%">
-  <div class="text">Helloooo</div>
+  <img src="{{posts.image_link}}" style="width:100%">
+  <div class="text"></div>
   </div>
   </div>
-  <h1> Artificial Intelligence </h1>
-  <a>
-    This will contain information from basic Machine Learning and Computer Vision tools to more advanced implementations.
-  </a>
+  <h1> {{ posts.title }} </h1>
+  {% for post in posts.each_posts %}    
+    <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
+{% endfor %}
 {% endblock %}
