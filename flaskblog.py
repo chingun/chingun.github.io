@@ -19,6 +19,7 @@ class custom_post:
         self.num_posts = self.num_posts + 1
         return
         
+        
 embedded_initial_posts = [
     {
         'subclass': 'Software',
@@ -43,6 +44,8 @@ embedded_initial_posts = [
     }
 ]
 embedded_posts = custom_post('Embedded Systems', '', 3, embedded_initial_posts)
+
+
 ai_inital_posts = [
 	{
 		'subclass': 'Reinforcement Learning',
@@ -53,6 +56,8 @@ ai_inital_posts = [
 	}
 ]
 ai_posts = custom_post('AI/ML', 'static/aigif.gif', 1, ai_inital_posts)
+
+
 app_posts = [
 	{ 
 		'subclass': 'iOS Applications',
@@ -64,19 +69,23 @@ app_posts = [
 ]
 app_posts = custom_post('Mobile Applications', 'static/codegif.gif', 1, app_posts)
 
+
 @app.route('/')             # handle all background for home page of website
 @app.route('/home')   		# 
 @app.route('/about') 
 def hello():
 	return render_template('home.html', )
 
+
 @app.route('/embedded')     # Behind on the link http://127.0.0.1:5000/projects
 def embedded():
 	return render_template('projects/embedded/index.html', posts=embedded_posts)
 
+
 @app.route('/apps')
 def apps():
 	return render_template('projects/apps/index.html', posts=app_posts)
+
 
 @app.route('/ai')
 def ai():
