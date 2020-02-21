@@ -51,7 +51,7 @@ ai_inital_posts = [
 		'subclass': 'Reinforcement Learning',
 		'link': 'https://xaviergeerinck.com/bellman-equations',
 		'link_about': 'Bellman Equations',
-		'more_on_topic': 'Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
+                'more_on_topic': ': Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
 		'date': 'February 2020',
 	},
 ]
