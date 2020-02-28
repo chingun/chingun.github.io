@@ -49,11 +49,11 @@ embedded_posts = custom_post('Embedded Systems', '', 3, embedded_initial_posts)
 ai_inital_posts = [
 	{
 		'subclass': 'Reinforcement Learning',
-		'link': '',
-		'link_about': '',
-		'more_on_topic': 'Nothing to write here yet. Here will lay my AI/ML Projects',
-		'date': 'December 2017',
-	}
+		'link': 'https://xaviergeerinck.com/bellman-equations',
+		'link_about': 'Bellman Equations',
+                'more_on_topic': ': Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
+		'date': 'February 2020',
+	},
 ]
 ai_posts = custom_post('AI/ML', 'static/aigif.gif', 1, ai_inital_posts)
 
