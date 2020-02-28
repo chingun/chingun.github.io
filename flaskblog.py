@@ -78,7 +78,7 @@ galactic_posts = [
                 'date': 'December 2017',
     }
 ]
-galactic_posts = custom_post('galactic_posts', 'static/earth.gif', 1, galactic_posts)
+galactic_posts = custom_post('Galactic Report', 'static/earth.gif', 1, galactic_posts)
 
 
 @app.route('/')             # handle all background for home page of website
