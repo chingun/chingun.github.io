@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="slideshow-container">
+  <div class="mySlides fade">
+  <img src="{{posts.image_link}}" >
+  <div class="text"></div>
+  </div>
+  </div>
+  <h1> {{ posts.title }} </h1>
+  {% for post in posts.each_posts %}    
+    <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
+  {% endfor %}
+{% endblock %}

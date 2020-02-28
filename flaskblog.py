@@ -69,6 +69,17 @@ app_posts = [
 ]
 app_posts = custom_post('Mobile Applications', 'static/codegif.gif', 1, app_posts)
 
+galactic_posts = [
+    { 
+        'subclass': 'Fly to space',
+        'link': '',
+        'link_about': '',
+        'more_on_topic': 'Galactic discoveries.',
+                'date': 'December 2017',
+    }
+]
+galactic_posts = custom_post('galactic_posts', 'static/earth.gif', 1, galactic_posts)
+
 
 @app.route('/')             # handle all background for home page of website
 @app.route('/home')   		# 
@@ -91,6 +102,9 @@ def apps():
 def ai():
 	return render_template('projects/ai/index.html', posts=ai_posts)
 
+@app.route('/galactic')
+def galactic():
+    return render_template('projects/galactic/index.html', posts=galactic_posts)
 
 if __name__ == '__main__': 	# True only if this module is run directly 
 	app.run(debug=True)
