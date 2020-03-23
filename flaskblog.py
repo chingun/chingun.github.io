@@ -55,7 +55,7 @@ ai_inital_posts = [
 		'date': 'February 2020',
 	},
 ]
-ai_posts = custom_post('AI/ML', 'static/aigif_80.gif', 1, ai_inital_posts)
+ai_posts = custom_post('AI/ML', 'static/aigif.gif', 1, ai_inital_posts)
 
 
 app_posts = [
