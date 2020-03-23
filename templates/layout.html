@@ -273,6 +273,48 @@ img {vertical-align: left;}
         });
       }
       // **************************************************
+      // Moving image Javascript
+      var i = 0;
+      // var txts = ["if !false: ", '\n', "  return \"it is funny", '\n', "  because it is true\""];
+      var speed = 100;
+      var txt = "if (!false):\n\ return \"it is funny\n\ because it is true\"";
+      var checker = false
+      function typeWriter() {
+          if (i < txt.length) {
+              if(txt.charAt(i)=='\"'){
+                checker = !checker;
+              }
+              else if(txt.charAt(i)=='\n'){
+                document.getElementById("message-box").innerHTML += "<br />&nbsp";
+              }
+              if (checker){
+                document.getElementById("message-box").innerHTML += txt.charAt(i);
+              }
+              else{
+                document.getElementById("message-box").innerHTML += txt.charAt(i);
+              }
+              i++;
+              setTimeout(typeWriter, speed);
+          }
+          if (i == txt.length){
+            document.getElementById("message-box").innerHTML += "<div class=\"blinking\">|</div>";
+            i++;
+          }
+      }
+      typeWriter()
+
+
+      // function typeWriter() {
+      //   for (var i = 0; i < txts.length; i++) {
+      //     for (var j = 0; j < txts[i].length; j++) {
+      //       document.getElementById("message-box").innerHTML += txts[i].charAt(j);
+      //       i++;
+      //       setTimeout(typeWriter, speed);
+      //     }
+      //   }
+      // }
+      typeWriter()
+      // **************************************************
       var slideIndex = 1;
       showSlides(slideIndex);
       function plusSlides(n) {
@@ -306,14 +348,6 @@ img {vertical-align: left;}
         slides[slideIndex-1].style.display = "block";  
         dots[slideIndex-1].className += " active";
       }
-      // **************************************************
-      // Moving image Javascript
-
-
-
-
-
-      // **************************************************
 
     </script>
 </body>
