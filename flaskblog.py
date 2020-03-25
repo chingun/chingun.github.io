@@ -1,5 +1,5 @@
 from flask import Flask, render_template, url_for
-app = Flask(__name__)       #special variable that is just the name of the module __name__ is same as __main__
+app = Flask(__name__) # special variable that is just the name of the module __name__ is same as __main__
 
 class custom_post:
     title = ''
@@ -18,7 +18,6 @@ class custom_post:
         self.each_posts.append(post)
         self.num_posts = self.num_posts + 1
         return
-        
         
 embedded_initial_posts = [
     {
@@ -83,20 +82,17 @@ galactic_posts = custom_post('Galactic Report', 'static/earth.gif', 1, galactic_
 
 @app.route('/')             # handle all background for home page of website
 @app.route('/home')   		# 
-@app.route('/about') 
+@app.route('/about')  # Decorator! Patterns for routing Function that operates on a function but is not used in C or C++ 
 def hello():
 	return render_template('home.html', )
-
 
 @app.route('/embedded')     # Behind on the link http://127.0.0.1:5000/projects
 def embedded():
 	return render_template('projects/embedded/index.html', posts=embedded_posts)
 
-
 @app.route('/apps')
 def apps():
 	return render_template('projects/apps/index.html', posts=app_posts)
-
 
 @app.route('/ai')
 def ai():
@@ -105,6 +101,7 @@ def ai():
 @app.route('/galactic')
 def galactic():
     return render_template('projects/galactic/index.html', posts=galactic_posts)
+
 
 if __name__ == '__main__': 	# True only if this module is run directly 
 	app.run(debug=True)

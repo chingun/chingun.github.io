@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH=/Users/chingunkhasar/Documents/itb_coding_projects/website/chingun.github.io/env/lib/node_modules
+export NPM_CONFIG_PREFIX=/Users/chingunkhasar/Documents/itb_coding_projects/website/chingun.github.io/env
+export npm_config_prefix=/Users/chingunkhasar/Documents/itb_coding_projects/website/chingun.github.io/env
+exec /Users/chingunkhasar/Documents/itb_coding_projects/website/chingun.github.io/env/bin/node "$@"
