@@ -21,36 +21,68 @@ class custom_post:
         
 embedded_initial_posts = [
     {
-        'subclass': 'Software',
+        'subclass': 'My Projects:',
+        'link': 'https://www.youtube.com/watch?v=RmNvX2cUl6A&ab_channel=ElectricalandComputerEngineeringatMichigan',
+        'link_about': 'Crowd Sourced Rescue Robot',
+        'more_on_topic': 'Sending rescue robots into disaster struck areas to aid rescue workers through crowd help. The deep dive into the project is written in the presentation.',
+        'has_more': True,
+        'sensors': ['Poison Gas Sensor', '3D view camera module', 'GPS'],
+        'techs': ['I2C', 'SPI', 'WiFi'],
+        'actions': ['Embedded Software in C/C++', 'PCB Hardware with Eagle', 'Circuit Simulation using Cadence'],
+        'date': 'December 2017',
+        'image_link': 'static/crowdDev.png',
+        'image_link1': 'static/slide.png',
+    },
+    {
+        'link': 'https://www.youtube.com/watch?v=RmNvX2cUl6A&ab_channel=ElectricalandComputerEngineeringatMichigan',
+        'link_about': 'Virtual Reality Human Interface Device for tracking head movement',
+        'more_on_topic': 'Giving an intuitive and immersive control for the rescue worker with VR control.',
+        'has_more': True,
+        'sensors': ['IMU'],
+        'techs': ['I2C', 'SPI', 'Bluetooth'],
+        'actions': ['Firmware with FreeRTOS in C/C++', 'PCB Hardware with Eagle', 'Circuitry Simulation using Cadence'],
+        'image_link': 'static/VR.png',
+    },
+    {
+        'link': 'https://www.lookingbus.com',
+        'link_about': 'Looking Bus',
+        'more_on_topic': 'A beacon device that make bus travel easy and safe for visually impaired people.',
+        'has_more': True,
+        'sensors': ['Bluetooth'],
+        'techs': ['I2C'],
+        'actions': ['Firmware with Texas Instruments RTOS in C', 'PCB Hardware with Eagle', 'Power Circuitry with Solar Panels'],
+        'image_link': 'static/lookingbus.png',
+    },
+    {
+        'subclass': 'Resources:',
         'link': 'https://www.eecs.umich.edu/courses/eecs473/labs.html',
         'link_about': 'Advanced Embedded Systems',
-        'more_on_topic': ': University of Michigan. ',
+        'more_on_topic': 'University of Michigan. ',
         'date': 'December 2017',
     },
     {
-        'subclass': 'Tools',
         'link': 'http://www.kicad-pcb.org/',
         'link_about': 'KiCad PCB Design',
-        'more_on_topic': ': free tool for designing PCBs',
+        'more_on_topic': 'free tool for designing PCBs',
         'date': 'December 2017',
     },
     {
-        'subclass': 'Libraries',
         'link': 'https://www.freertos.org/',
         'link_about': 'freeRTOS',
-        'more_on_topic': ': free real time operating system protected under open source license',
+        'more_on_topic': 'free real time operating system protected under open source license',
         'date': 'December 2017',
     }
 ]
-embedded_posts = custom_post('Embedded Systems', '', 3, embedded_initial_posts)
+embedded_posts = custom_post('Embedded Systems', 'static/crowdDev.png', 3, embedded_initial_posts)
 
 
 ai_inital_posts = [
 	{
-		'subclass': 'Reinforcement Learning',
+        'subclass': 'Resources:',
+		'ml_class': 'Reinforcement Learning',
 		'link': 'https://xaviergeerinck.com/bellman-equations',
 		'link_about': 'Bellman Equations',
-                'more_on_topic': ': Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
+        'more_on_topic': ': Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
 		'date': 'February 2020',
 	},
 ]
@@ -66,7 +98,7 @@ app_posts = [
                 'date': 'December 2017',
 	}
 ]
-app_posts = custom_post('Mobile Applications', 'static/codegif.gif', 1, app_posts)
+app_posts = custom_post('Software', 'static/codegif.gif', 1, app_posts)
 
 galactic_posts = [
     { 

@@ -1,14 +1,40 @@
 {% extends "layout.html" %}
 {% block content %}
-  <div class="slideshow-container">
-  <div class="mySlides fade">
-  <img src="{{posts.image_link}}" style="width:100%">
-  <div class="text"></div>
-  </div>
-  </div>
   <h1> {{ posts.title }} </h1>
-  {% for post in posts.each_posts %}    
-    <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
+  <a> Embedded world is a great passion of mine. I played with circuits since 13 and I love both Electrical Engineering and Computer Science. I find that Embedded Systems offers the best of both worlds to me.</a>
+  {% for post in posts.each_posts %}  
+    {% if post.subclass is defined %}
+    <h2> {{ post.subclass }} </h2>
+    {% endif %}
+    {% if post.has_more %}
+    <div class="project_link">
+    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u>:<div style="color:black !important">{{post.more_on_topic}}</div></a>
+      <div class="dropdown-container">
+      {% if post.actions is defined %}
+        {% if post.image_link is defined %}
+        <img src="{{post.image_link}}" style="height:200px;">
+        <img src="{{post.image_link1}}" style="height:200px;"><br>
+        {% endif %}
+        <a>Developed:</a><br>
+        {% for act in post.actions %}  
+        <li><a> {{ act }} </a></li> 
+        {% endfor %}
+      {% endif %}
+      {% if post.sensors is defined %}
+        <a> Technologies used:</a><br>
+        {% for sense in post.sensors %}  
+        <li><a> {{ sense }} </a></li> 
+        {% endfor %}
+      {% endif %}
+      {% if post.sensors is defined %}
+        <a>Communication Protocols:</a><br>
+        {% for tech in post.techs %}  
+        <li><a> {{ tech }} </a></li> 
+        {% endfor %}
+        </div>
+      {% endif %}
+      {% else %}
+        <a href="{{ post.link }}"> {{post.link_about}}</a><a>{{post.more_on_topic}}</a>
+    {% endif %}<br>
   {% endfor %}
 {% endblock %}
-ls
