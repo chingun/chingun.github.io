@@ -9,7 +9,6 @@
   position: absolute;
   z-index: 1;
 }
-
 .braintop.top img{
   animation: shake 5s;
   /* When the animation is finished, start again */
@@ -25,21 +24,16 @@
   /* When the animation is finished, start again */
   animation-iteration-count: infinite;
 }
-
 @keyframes shake {
   50% { transform: translate(3px, 1px); }
 }
-
 @keyframes shaker {
   50% { transform: translate(4px, 4px); }
 }
-
 @keyframes shakest {
   50% { transform: translate(0px, 4px); }
 }
-
 </style>
-
 <!--   <div class="slideshow-container">
   <div class="mySlides fade"> -->
   <!-- <img src="{{posts.image_link}}" style="height:250px"> -->
@@ -58,6 +52,4 @@
     <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
     </div>
   {% endfor %}
-
-  </div>
 {% endblock %}

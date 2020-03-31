@@ -102,15 +102,15 @@ app_posts = custom_post('Software', 'static/codegif.gif', 1, app_posts)
 
 galactic_posts = [
     { 
-        'subclass': 'Fly to space',
+        'subclass': 'Game',
+        'title': 'Flappy Bird',
         'link': '',
         'link_about': '',
-        'more_on_topic': 'Galactic discoveries.',
-                'date': 'December 2017',
+        'more_on_topic': 'Press any key to play.',
+        'date': 'December 2017',
     }
 ]
 galactic_posts = custom_post('Galactic Report', 'static/earth.gif', 1, galactic_posts)
-
 
 @app.route('/')             # handle all background for home page of website
 @app.route('/home')   		# 

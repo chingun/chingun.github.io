@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 {% block content %}
+  <style>
+    .project_link{}
+    .project_link u {
+      color: purple !important;
+    }
+    .project_link u:hover {
+      color: pink !important;
+    }
+  </style>
   <h1> {{ posts.title }} </h1>
   <a> Embedded world is a great passion of mine. I played with circuits since 13 and I love both Electrical Engineering and Computer Science. I find that Embedded Systems offers the best of both worlds to me.</a>
   {% for post in posts.each_posts %}  
@@ -8,12 +17,11 @@
     {% endif %}
     {% if post.has_more %}
     <div class="project_link">
-    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u>:<div style="color:black !important">{{post.more_on_topic}}</div></a>
+    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
-        <img src="{{post.image_link}}" style="height:200px;">
-        <img src="{{post.image_link1}}" style="height:200px;"><br>
+        <img src="{{post.image_link}}" style="height:200px;"><img src="{{post.image_link1}}" style="height:200px;"><br>
         {% endif %}
         <a>Developed:</a><br>
         {% for act in post.actions %}  
@@ -34,7 +42,7 @@
         </div>
       {% endif %}
       {% else %}
-        <a href="{{ post.link }}"> {{post.link_about}}</a><a>{{post.more_on_topic}}</a>
+        <a href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
