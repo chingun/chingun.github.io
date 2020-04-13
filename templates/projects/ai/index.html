@@ -34,9 +34,6 @@
   50% { transform: translate(0px, 4px); }
 }
 </style>
-<!--   <div class="slideshow-container">
-  <div class="mySlides fade"> -->
-  <!-- <img src="{{posts.image_link}}" style="height:250px"> -->
   <div class="brainbase">
   	<div class="braintop bottom"><img src="static/brain/layer3.png" class="braintop bottom" style="height:400px;"></div>	
   	<div class="braintop middle"><img src="static/brain/layer2.png" class="braintop middle" style="height:400px;"></div>
@@ -44,12 +41,10 @@
     <img src="static/brain/layer4.png" style="height:400px;">
   </div>
 
-  <!-- /div>
-  </div> -->
   <div style="margin-top:430px">
   <h1> {{ posts.title }} </h1>
   {% for post in posts.each_posts %}    
     <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
-    </div>
+  </div>
   {% endfor %}
 {% endblock %}
