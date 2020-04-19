@@ -58,18 +58,21 @@ embedded_initial_posts = [
         'link': 'https://www.eecs.umich.edu/courses/eecs473/labs.html',
         'link_about': 'Advanced Embedded Systems',
         'more_on_topic': 'University of Michigan. ',
+        'has_more': False,
         'date': 'December 2017',
     },
     {
         'link': 'http://www.kicad-pcb.org/',
         'link_about': 'KiCad PCB Design',
         'more_on_topic': 'free tool for designing PCBs',
+        'has_more': False,
         'date': 'December 2017',
     },
     {
         'link': 'https://www.freertos.org/',
         'link_about': 'freeRTOS',
         'more_on_topic': 'free real time operating system protected under open source license',
+        'has_more': False,
         'date': 'December 2017',
     }
 ]
