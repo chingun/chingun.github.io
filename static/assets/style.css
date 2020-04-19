@@ -237,6 +237,7 @@ a,a:visited,a:hover,a:active{
   position:relative;
   transition:0.5s color ease;
   text-decoration:none;
+  color:#660b81;;
 }
 
 a:hover{
