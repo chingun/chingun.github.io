@@ -230,6 +230,7 @@ img {
 }
 
 /* * * * * * * Improving Hover Feature * * * * * * */
+
 a,a:visited,a:hover,a:active{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
