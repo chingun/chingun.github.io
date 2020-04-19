@@ -244,6 +244,7 @@ a.before:before,a.after:after{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
   position:absolute;
+  text-decoration:none !important;
 }
 
 a.before:before{
