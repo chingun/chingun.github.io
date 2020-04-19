@@ -254,7 +254,7 @@ a.after:after{
 }
 
 a.before:before,a.after:after{
-  height:0.05rem;
+  height:0.1rem;
   opacity: 0.5;
   width:0;
   background:#660b81;
