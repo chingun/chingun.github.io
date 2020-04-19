@@ -1,7 +1,4 @@
 {% extends "layout.html" %}
-{% block style %}
-  <link rel="stylesheet" type="text/css" href="static/assets/style.css">
-{% endblock %}
 {% block content %}
   <style>
     .project_link{}
@@ -19,7 +16,8 @@
     <h2> {{ post.subclass }} </h2>
     {% endif %}
     {% if post.has_more %}
-    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><a class="first after">{{post.link_about}}</a><div style="color:black !important; display: inline;"><a>: {{post.more_on_topic}}</a></div></a>
+    <div class="project_link">
+    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u class="first after" style="text-decoration:none">{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
@@ -41,7 +39,7 @@
         {% for tech in post.techs %}  
         <li><a> {{ tech }} </a></li> 
         {% endfor %}
-        </div><br>
+        </div>
       {% endif %}
       {% else %}
         <a class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
