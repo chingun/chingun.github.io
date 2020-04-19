@@ -3,44 +3,6 @@
   <link rel="stylesheet" type="text/css" href="static/assets/style.css">
 {% endblock %}
 {% block content %}
-  <style>
-    u{
-      color:#660b81;
-    }
-    u,u:visited,u:hover,u:active{
-      -webkit-backface-visibility:hidden;
-              backface-visibility:hidden;
-      position:relative;
-      transition:0.5s color ease;
-      text-decoration:none !important;
-    }
-    u.before:before,u.after:after{
-      content: "";
-      transition:0.5s all ease;
-      -webkit-backface-visibility:hidden;
-              backface-visibility:hidden;
-      position:absolute;
-      text-decoration:none !important;
-    }
-    u.before:before{
-      top:-0.25em;
-    }
-    u.after:after{
-      bottom:-0.25em;
-    }
-    u.before:before,u.after:after{
-      height:0.1rem;
-      opacity: 0.5;
-      width:0;
-      background:#660b81;
-    }
-    u.first:after{
-      left:0;
-    }
-    u.before:hover:before,u.after:hover:after{
-      width:100%;
-    }
-  </style>
   <h1> {{ posts.title }} </h1>
   <a> Embedded world is a great passion of mine. I played with circuits since 13 and I love both Electrical Engineering and Computer Science. I find that Embedded Systems offers the best of both worlds to me.</a>
   {% for post in posts.each_posts %}  
@@ -74,7 +36,7 @@
         </div>
       {% endif %}
       {% else %}
-        <a><u class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u></a><a>: {{post.more_on_topic}}</a>
+        <u class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
