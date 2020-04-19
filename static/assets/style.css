@@ -39,7 +39,7 @@ body {
   font-size: 18px;
   font-family: "Helvetica Neue", Arial,sans-serif;
   font-weight: 300;
-  color: #111;
+  color: #111 !important;
   text-align: right;
   display: block;
 }
