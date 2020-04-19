@@ -19,12 +19,11 @@
     <h2> {{ post.subclass }} </h2>
     {% endif %}
     {% if post.has_more %}
-    <div class="project_link">
-    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
+    <a class="dropdown-btn first after" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
-        <img src="{{post.image_link}}" style="height:200px;"><img src="{{post.image_link1}}" style="height:200px;"><br>
+        <img class="link first after" src="{{post.image_link}}" style="height:200px;"><img src="{{post.image_link1}}" style="height:200px;"><br>
         {% endif %}
         <a>Developed:</a><br>
         {% for act in post.actions %}  
@@ -45,7 +44,7 @@
         </div><br>
       {% endif %}
       {% else %}
-        <a class="link first after" href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
+        <a class="link first after"  href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
