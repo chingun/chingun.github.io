@@ -1,32 +1,30 @@
 {% extends "layout.html" %}
+{% block style %}
+  <link rel="stylesheet" type="text/css" href="static/assets/style.css">
+{% endblock %}
 {% block content %}
-  <!--   <div class="slideshow-container">
-  <div class="mySlides fade">
-  <img src="{{posts.image_link}}" style="width:500px">
-  <div class="text"></div>
-  </div>
-  </div> -->
   <style>
     .blinking{
       display: inline-block;
-      color:Tomato !important;
+      color:#660b81 !important;
       animation:blinkingText 1.2s infinite;
   }
   @keyframes blinkingText{
-      0%{     color: Tomato;    }
-      49%{    color: Tomato; }
+      0%{     color: #660b81;    }
+      49%{    color: #660b81; }
       60%{    color: transparent; }
       99%{    color: transparent;  }
-      100%{   color: Tomato;    }
+      100%{   color: #660b81;    }
   }
     .coder {
       display: inline-block;
-      color:Tomato;
+      color:#660b81;
       font-family: Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace; 
     }
-}
+  }
   </style>
   <font size="5" onmouseover="typeWriter()"><div id="message-box" class="coder">▶ </div></font>
+
   <h1> {{ posts.title }} </h1>
   {% for post in posts.each_posts %}    
     <a href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>

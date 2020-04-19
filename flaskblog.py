@@ -30,8 +30,8 @@ embedded_initial_posts = [
         'techs': ['I2C', 'SPI', 'WiFi'],
         'actions': ['Embedded Software in C/C++', 'PCB Hardware with Eagle', 'Circuit Simulation using Cadence'],
         'date': 'December 2017',
-        'image_link': 'static/crowdDev.png',
-        'image_link1': 'static/slide.png',
+        'image_link': 'static/pictures/crowdDev.png',
+        'image_link1': 'static/pictures/slide.png',
     },
     {
         'link': 'https://www.youtube.com/watch?v=RmNvX2cUl6A&ab_channel=ElectricalandComputerEngineeringatMichigan',
@@ -41,7 +41,7 @@ embedded_initial_posts = [
         'sensors': ['IMU'],
         'techs': ['I2C', 'SPI', 'Bluetooth'],
         'actions': ['Firmware with FreeRTOS in C/C++', 'PCB Hardware with Eagle', 'Circuitry Simulation using Cadence'],
-        'image_link': 'static/VR.png',
+        'image_link': 'static/pictures/VR.png',
     },
     {
         'link': 'https://www.lookingbus.com',
@@ -51,7 +51,7 @@ embedded_initial_posts = [
         'sensors': ['Bluetooth'],
         'techs': ['I2C'],
         'actions': ['Firmware with Texas Instruments RTOS in C', 'PCB Hardware with Eagle', 'Power Circuitry with Solar Panels'],
-        'image_link': 'static/lookingbus.png',
+        'image_link': 'static/pictures/lookingbus.png',
     },
     {
         'subclass': 'Resources:',
@@ -73,7 +73,7 @@ embedded_initial_posts = [
         'date': 'December 2017',
     }
 ]
-embedded_posts = custom_post('Embedded Systems', 'static/crowdDev.png', 3, embedded_initial_posts)
+embedded_posts = custom_post('Embedded Systems', 'static/pictures/crowdDev.png', 3, embedded_initial_posts)
 
 
 ai_inital_posts = [
@@ -86,8 +86,7 @@ ai_inital_posts = [
 		'date': 'February 2020',
 	},
 ]
-ai_posts = custom_post('AI/ML', 'static/aigif.gif', 1, ai_inital_posts)
-
+ai_posts = custom_post('AI/ML', 'static/pictures/aigif.gif', 1, ai_inital_posts)
 
 app_posts = [
 	{ 
@@ -98,7 +97,7 @@ app_posts = [
                 'date': 'December 2017',
 	}
 ]
-app_posts = custom_post('Software', 'static/codegif.gif', 1, app_posts)
+app_posts = custom_post('Software', 'static/pictures/codegif.gif', 1, app_posts)
 
 galactic_posts = [
     { 
@@ -110,11 +109,11 @@ galactic_posts = [
         'date': 'December 2017',
     }
 ]
-galactic_posts = custom_post('Galactic Report', 'static/earth.gif', 1, galactic_posts)
+galactic_posts = custom_post('Galactic Report', 'static/pictures/earth.gif', 1, galactic_posts)
 
 @app.route('/')             # handle all background for home page of website
 @app.route('/home')   		# 
-@app.route('/about')  # Decorator! Patterns for routing Function that operates on a function but is not used in C or C++ 
+@app.route('/about')        # Decorator! Patterns for routing Function that operates on a function but is not used in C or C++ 
 def hello():
 	return render_template('home.html', )
 
