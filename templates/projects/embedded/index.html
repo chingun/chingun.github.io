@@ -32,7 +32,7 @@
       bottom:-0.25em;
     }
     u.before:before,u.after:after{
-      height:0.1rem;
+      height:0.2rem;
       opacity: 0.5;
       width:0;
       background:#660b81;
@@ -51,7 +51,6 @@
     <h2> {{ post.subclass }} </h2>
     {% endif %}
     {% if post.has_more %}
-    <div class="project_link">
     <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u class="first after" style="text-decoration:none">{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
@@ -77,7 +76,7 @@
         </div>
       {% endif %}
       {% else %}
-        <u class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u><a>: {{post.more_on_topic}}</a>
+        <a class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
