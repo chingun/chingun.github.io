@@ -17,7 +17,7 @@
     {% endif %}
     {% if post.has_more %}
     <div class="project_link">
-    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u>{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
+    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><div class="first after">{{post.link_about}}</div><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
@@ -42,7 +42,7 @@
         </div>
       {% endif %}
       {% else %}
-        <a href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
+        <a class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
