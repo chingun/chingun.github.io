@@ -23,7 +23,7 @@
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
-        <img class="link first after" src="{{post.image_link}}" style="height:200px;"><img src="{{post.image_link1}}" style="height:200px;"><br>
+        <img src="{{post.image_link}}" style="height:200px;"><img src="{{post.image_link1}}" style="height:200px;"><br>
         {% endif %}
         <a>Developed:</a><br>
         {% for act in post.actions %}  
@@ -44,7 +44,7 @@
         </div><br>
       {% endif %}
       {% else %}
-        <a class="link first after" href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
+        <a class="first after" href="{{ post.link }}"> {{post.link_about}}</a><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}

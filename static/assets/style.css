@@ -230,17 +230,12 @@ img {
 }
 
 /* * * * * * * Improving Hover Feature * * * * * * */
-
 a,a:visited,a:hover,a:active{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
   position:relative;
   transition:0.5s color ease;
-  text-decoration:none;
-}
-
-a:hover{
-  color:#660b81;;
+  text-decoration:none !important;
 }
 
 a.before:before,a.after:after{
