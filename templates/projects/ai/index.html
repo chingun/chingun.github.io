@@ -47,7 +47,7 @@
   <h1> {{ posts.title }} </h1>
   
   {% for post in posts.each_posts %}    
-    <a class="first after" href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
+    <a class="link first after" href="{{ post.link }}">{{ post.link_about }} </a><a>{{post.more_on_topic}} </a><br>
   </div>
   {% endfor %}
 {% endblock %}

@@ -230,13 +230,18 @@ img {
 }
 
 /* * * * * * * Improving Hover Feature * * * * * * */
+.link { color: #660b81; } /* CSS link color */
 
-a,a:visited,a:hover,a:active{
+.link a,a:visited,a:hover,a:active{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
   position:relative;
   transition:0.5s color ease;
   text-decoration:none;
+  color:#660b81;;
+}
+
+a.link{
   color:#660b81;;
 }
 
