@@ -266,7 +266,7 @@ a.first:after{
   left:0;
 }
 
-u.before:hover:before,u.after:hover:after{
+a.before:hover:before,u.after:hover:after{
   width:100%;
 }
 
