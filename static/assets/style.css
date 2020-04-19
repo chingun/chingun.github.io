@@ -235,7 +235,6 @@ a,a:visited,a:hover,a:active{
           backface-visibility:hidden;
   position:relative;
   transition:0.5s color ease;
-  text-decoration:none !important;
 }
 
 a.before:before,a.after:after{
@@ -244,7 +243,6 @@ a.before:before,a.after:after{
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
   position:absolute;
-  text-decoration:none !important;
 }
 
 a.before:before{
@@ -267,45 +265,5 @@ a.first:after{
 }
 
 a.before:hover:before,u.after:hover:after{
-  width:100%;
-}
-
-u,u:visited,u:hover,u:active{
-  -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
-  position:relative;
-  transition:0.5s color ease;
-  text-decoration:none !important;
-}
-
-u.before:before,u.after:after{
-  content: "";
-  transition:0.5s all ease;
-  -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
-  position:absolute;
-  text-decoration:none !important;
-}
-
-u.before:before{
-  top:-0.25em;
-}
-
-u.after:after{
-  bottom:-0.25em;
-}
-
-u.before:before,u.after:after{
-  height:0.1rem;
-  opacity: 0.5;
-  width:0;
-  background:#660b81;
-}
-
-u.first:after{
-  left:0;
-}
-
-u.before:hover:before,u.after:hover:after{
   width:100%;
 }
