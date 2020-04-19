@@ -51,7 +51,7 @@
     <h2> {{ post.subclass }} </h2>
     {% endif %}
     {% if post.has_more %}
-    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u class="first after" style="text-decoration:none">{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
+    <br><a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u class="first after" style="text-decoration:none">{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
       <div class="dropdown-container">
       {% if post.actions is defined %}
         {% if post.image_link is defined %}
