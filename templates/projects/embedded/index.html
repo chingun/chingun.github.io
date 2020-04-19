@@ -74,7 +74,7 @@
         </div>
       {% endif %}
       {% else %}
-        <u class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u><a>: {{post.more_on_topic}}</a>
+        <a><u class="first after" style="text-decoration:none" href="{{ post.link }}"> {{post.link_about}}</u></a><a>: {{post.more_on_topic}}</a>
     {% endif %}<br>
   {% endfor %}
 {% endblock %}
