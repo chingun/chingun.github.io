@@ -80,6 +80,14 @@ embedded_posts = custom_post('Embedded Systems', 'static/pictures/crowdDev.png',
 
 
 ai_inital_posts = [
+    { 
+        'subclass': 'Resources:',
+        'ml_class': 'Reinforcement Learning',
+        'link': '',
+        'link_about': '',
+        'more_on_topic': 'To fill in JS apps...',
+                'date': 'December 2017',
+    },
 	{
         'subclass': 'Resources:',
 		'ml_class': 'Reinforcement Learning',
@@ -96,7 +104,7 @@ app_posts = [
 		'subclass': 'iOS Applications',
 		'link': '',
 		'link_about': '',
-		'more_on_topic': 'Here lays all my applications which is 0 right now',
+		'more_on_topic': 'To fill in...',
                 'date': 'December 2017',
 	}
 ]
@@ -136,6 +144,9 @@ def ai():
 def galactic():
     return render_template('projects/galactic/index.html', posts=galactic_posts)
 
+@app.route('/websurfer')
+def websurfer():
+    return render_template('projects/websurfer/index.html')
 
 if __name__ == '__main__': 	# True only if this module is run directly 
 	app.run(debug=True)

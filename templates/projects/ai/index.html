@@ -3,40 +3,41 @@
   <link rel="stylesheet" type="text/css" href="static/assets/style.css">
 {% endblock %}
 {% block content %}
-<style>
-.brainbase {
-  position: relative;
-  float: left;
-}
-.braintop {
-  position: absolute;
-  z-index: 1;
-}
-.braintop.top img{
-  animation: shake 5s;
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
-}
-.braintop.middle img{
-  animation: shaker 5s;
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
-}
-.braintop.bottom img{
-  animation: shakest 5s;
-  /* When the animation is finished, start again */
-  animation-iteration-count: infinite;
-}
-@keyframes shake {
-  50% { transform: translate(3px, 1px); }
-}
-@keyframes shaker {
-  50% { transform: translate(4px, 4px); }
-}
-@keyframes shakest {
-  50% { transform: translate(0px, 4px); }
-}
-</style>
+  <style>
+    .brainbase {
+      position: relative;
+      float: left;
+    }
+    .braintop {
+      position: absolute;
+      z-index: 1;
+    }
+    .braintop.top img{
+      animation: shake 5s;
+      /* When the animation is finished, start again */
+      animation-iteration-count: infinite;
+    }
+    .braintop.middle img{
+      animation: shaker 5s;
+      /* When the animation is finished, start again */
+      animation-iteration-count: infinite;
+    }
+    .braintop.bottom img{
+      animation: shakest 5s;
+      /* When the animation is finished, start again */
+      animation-iteration-count: infinite;
+    }
+    @keyframes shake {
+      50% { transform: translate(3px, 1px); }
+    }
+    @keyframes shaker {
+      50% { transform: translate(4px, 4px); }
+    }
+    @keyframes shakest {
+      50% { transform: translate(0px, 4px); }
+    }
+  </style>
+
   <div class="brainbase">
   	<div class="braintop bottom"><img src="static/brain/layer3.png" class="braintop bottom" style="height:400px;"></div>	
   	<div class="braintop middle"><img src="static/brain/layer2.png" class="braintop middle" style="height:400px;"></div>
@@ -45,8 +46,9 @@
   </div><br>
   <div style="margin-top:430px">
   <h1> {{ posts.title }} </h1>
-  {% for post in posts.each_posts %}    
-    <u class="first after" style="text-decoration:none" href="{{ post.link }}">{{ post.link_about }} </u><a>{{post.more_on_topic}} </a><br>
+  {% for post in posts.each_posts %}
+
+    <a style="text-decoration:none" href="{{ post.link }}"><u class="first after" style="text-decoration:none" >{{ post.link_about }} </u></a><a>{{post.more_on_topic}} </a><br><br>
   </div>
   {% endfor %}
 {% endblock %}
