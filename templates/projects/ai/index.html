@@ -46,7 +46,7 @@
   <div style="margin-top:430px">
   <h1> {{ posts.title }} </h1>
   {% for post in posts.each_posts %}    
-    <a class="first after" style="text-decoration:none" href="{{ post.link }}">{{ post.link_about }} </u><a>{{post.more_on_topic}} </a><br>
+    <u class="first after" style="text-decoration:none" href="{{ post.link }}">{{ post.link_about }} </u><a>{{post.more_on_topic}} </a><br>
   </div>
   {% endfor %}
 {% endblock %}
