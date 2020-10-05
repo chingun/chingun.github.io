@@ -1,26 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
-  font-family: "Helvetica Neue", Arial,sans-serif;
+}
+
+.ChingunPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 /* The sidebar menu */
 .sidenav {
-  height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 280px; /* Set the width of the sidebar */
-  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-  z-index: 1; /* Stay on top */
+  height: 100%;
+  position: fixed;  /*Fixed Sidebar (stay in place on scroll) */
   top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #FFFFFF; /* White */
+  left: 200px;
+  background-color: white; /* White */
   overflow: scroll;
   margin-top: 20px;
 }
 
 .sidenav h1 {
   margin: 20px 20px 40px 50px;
-  border: 1.5px solid black;
-  padding: 5px;
+  border: 2px solid black;
+  padding: 3px;
   text-align: center;
-  font-family: "Helvetica Neue", Arial,sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 500;
   text-decoration: none;
   font-size: 21px;
@@ -29,7 +42,7 @@ body {
 }
 
 /* The navigation menu links */
-.sidenav a, .dropdown-btn{
+.sidenav a, .dropdown-btn {
   margin-bottom: 20px;
   margin-top: 20px;
   margin-right: 20px;
@@ -37,35 +50,39 @@ body {
   cursor: pointer;
   outline: none;
   font-size: 18px;
-  font-family: "Helvetica Neue", Arial,sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   color: #111;
   text-align: right;
   display: block;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .dropdown-btn:hover, title:hover {
   color: #660b81;
+  font-size: 20px;
 }
 
-.dropdown-container{
+.dropdown-container {
   display: none;
   background: #FFFFFF;
 }
-.dropdown-container a{
+
+.dropdown-container a {
   margin-bottom: 5px;
   margin-top: 5px;
 }
-.fa-caret-down{
+
+.fa-caret-down {
   float: right;
 }
 
 /* Style page content */
 .main {
-  margin-left: 300px; /* Same as the width of the sidebar */
   margin-top: 40px;
-  /*height: auto;  Full-height: remove this if you want "auto" height */
+  height: auto;  /*Full-height: remove this if you want "auto" height */
   width: 600px;  /*Set the width of the sidebar */
   /*position: fixed;  Fixed Sidebar (stay in place on scroll) */
   z-index: 1; /* Stay on top */
@@ -77,47 +94,49 @@ body {
   /*overflow-x: hidden;  Disable horizontal scroll */
 }
 
-.main h1{
+.main h1 {
   font-size: 30px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
 }
 
-.main h2{
+.main h2 {
   font-size: 25px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
 }
 
-.main a{
+.main a {
   font-size: 18px;
   font-family: "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
 }
-/*
+
+.main a:link {
+  color:#660b81;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+
+.main a:link:hover {
+  font-size: 19px;
+}
+
 .icons {
-  margin-left: 300px; /* Same as the width of the sidebar *
-  position: relative;
-  border:  1.5px solid black;
-  /*background: url('images/linkedin.png');*
-}*/
-.icons{
   margin-top: 40px;
   bottom: 1px;
 }
 
-.icons:hover{
+.icons:hover {
 }
 
-.icons a:link{
-  margin-right: 20px; /* Same as the width of the sidebar */
+.icons a:link {
+  margin-right: 20px;
   opacity: 0.5;
   filter: alpha(opacity=50);
-/*  border: 1px solid black;
-*/
 }
 
-.icons a:hover{
+.icons a:hover {
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -126,7 +145,7 @@ body {
 * {box-sizing: border-box}
 body {
   font-family: Verdana, 
-  sans-serif; margin:0;
+  sans-serif; margin: 0;
   overflow: scroll;
 }
 
@@ -136,14 +155,12 @@ img {
   vertical-align: left;
 }
 
-/* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -159,13 +176,11 @@ img {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
@@ -231,20 +246,22 @@ img {
 
 /* * * * * * * Improving Hover Feature * * * * * * */
 
-u{
+u  { 
   font-size: 18px;
   font-family: "Helvetica Neue", Arial,sans-serif;
   font-weight: 300;
   color:#660b81;
 }
-u,u:visited,u:hover,u:active{
+
+u,u:visited,u:hover,u:active {
   -webkit-backface-visibility:hidden;
           backface-visibility:hidden;
   position:relative;
   transition:0.5s color ease;
   text-decoration:none !important;
 }
-u.before:before,u.after:after{
+
+u.before:before,u.after:after {
   content: "";
   transition:0.5s all ease;
   -webkit-backface-visibility:hidden;
@@ -252,63 +269,26 @@ u.before:before,u.after:after{
   position:absolute;
   text-decoration:none !important;
 }
-u.before:before{
+
+u.before:before {
   top:-0.25em;
 }
-u.after:after{
+
+u.after:after {
   bottom:-0.25em;
 }
-u.before:before,u.after:after{
+
+u.before:before,u.after:after {
   height:0.9rem;
   opacity: 0.5;
   width:0;
   background:#660b81;
 }
-u.first:after{
-  left:0;
-}
-u.before:hover:before,u.after:hover:after{
-  width:100%;
-}
 
-
-/* * * * * * * Improving Hover Feature * * * * * * */
-/*
-a,a:visited,a:hover,a:active{
-  -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
-  position:relative;
-  transition:0.5s color ease;
-}
-
-a.before:before,a.after:after{
-  content: "";
-  transition:0.5s all ease;
-  -webkit-backface-visibility:hidden;
-          backface-visibility:hidden;
-  position:absolute;
-}
-
-a.before:before{
-  top:-0.25em;
-}
-
-a.after:after{
-  bottom:-0.25em;
-}
-
-a.before:before,a.after:after{
-  height:0.1rem;
-  opacity: 0.5;
-  width:0;
-  background:#660b81;
-}
-
-a.first:after{
+u.first:after {
   left:0;
 }
 
-a.before:hover:before,u.after:hover:after{
+u.before:hover:before,u.after:hover:after {
   width:100%;
 }
-*/

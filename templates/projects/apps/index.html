@@ -23,12 +23,13 @@
     }
   }
 
-  u{
+  u {
     font-size: 18px;
     font-family: "Helvetica Neue", Arial,sans-serif;
     font-weight: 300;
     color:#660b81;
   }
+
   u,u:visited,u:hover,u:active{
     -webkit-backface-visibility:hidden;
             backface-visibility:hidden;
@@ -36,6 +37,7 @@
     transition:0.5s color ease;
     text-decoration:none !important;
   }
+
   u.before:before,u.after:after{
     content: "";
     transition:0.5s all ease;
@@ -44,32 +46,94 @@
     position:absolute;
     text-decoration:none !important;
   }
+
   u.before:before{
     top:-0.25em;
   }
+
   u.after:after{
     bottom:-0.25em;
   }
+
   u.before:before,u.after:after{
     height:0.1rem;
     opacity: 0.5;
     width:0;
     background:#660b81;
   }
+
   u.first:after{
     left:0;
   }
+
   u.before:hover:before,u.after:hover:after{
     width:100%;
   }
+
   </style>
   <font size="5" onmouseover="typeWriter()"><div id="message-box" class="coder">▶ </div></font>
+  <h1> 
+    {{ posts.title }}
+  </h1>
+  <a>After my introduction to web technologies, I started to love teaching myself different frameworks and modern tools and used them for my start-up.</a>
+  {% for post in posts.each_posts %}  
+    {% if post.subclass is defined %}
+      <h2> 
+        {{ post.subclass }} 
+      </h2>
+    {% endif %}
 
-  <h1> {{ posts.title }} </h1>
-  {% for post in posts.each_posts %}    
-    <a style="text-decoration:none" href="{{ post.link }}">
-      <u class="first after" style="text-decoration:none" href="{{ post.link }}">
-      {{ post.link_about }} 
-    </u></a><a>{{post.more_on_topic}} </a><br>
+    {% if post.has_more %}
+      {% if post.subclass is not defined %} 
+        <br> 
+      {% endif %}
+      <a class="dropdown-btn" style="display:inline !important;text-align:left !important;">
+        <u class="first after" style="text-decoration:none">
+          {{post.link_about}}
+        </u>
+        <div style="color:black !important; display: inline;">
+          : {{post.more_on_topic}}
+        </div>
+      </a>
+      <div class="dropdown-container">
+        {% if post.actions is defined %}
+          {% if post.image_link is defined %}
+            <img src="{{post.image_link}}" style="height:400px;"> <br>
+          {% endif %}
+          <a>
+            Developed:
+          </a><br>
+          {% for act in post.actions %}  
+            <li><a> 
+              {{ act }} 
+            </a></li> 
+          {% endfor %}
+        {% endif %}
+        {% if post.sensors is defined %}
+          <a> Technologies used:</a><br>
+          {% for sense in post.sensors %}  
+            <li><a> {{ sense }} </a></li> 
+          {% endfor %}
+        {% endif %}
+        {% if post.sensors is defined %}
+          <a>Communication Protocols:</a><br>
+          {% for tech in post.techs %}  
+            <li><a> {{ tech }} </a></li> 
+          {% endfor %}
+        {% endif %}
+        {% else %}
+          {% if post.subclass is not defined %} 
+            <br> 
+          {% endif %}
+            <a style="text-decoration:none" href="{{ post.link }}">
+              <u class="first after" style="text-decoration:none" href="{{post.link}}"> 
+                {{post.link_about}}
+              </u>
+            </a>
+            <a>
+              : {{post.more_on_topic}}
+            </a>
+        {% endif %}<br>
+      </div><br>
   {% endfor %}
 {% endblock %}

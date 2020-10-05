@@ -21,7 +21,7 @@ class custom_post:
         
 embedded_initial_posts = [
     {
-        'subclass': 'My Projects:',
+        'subclass': 'Projects:',
         'link': 'https://www.youtube.com/watch?v=RmNvX2cUl6A&ab_channel=ElectricalandComputerEngineeringatMichigan',
         'link_about': 'Crowd Sourced Rescue Robot',
         'more_on_topic': 'Sending rescue robots into disaster struck areas to aid rescue workers through crowd help. The deep dive into the project is written in the presentation.',
@@ -35,7 +35,7 @@ embedded_initial_posts = [
     },
     {
         'link': 'https://www.youtube.com/watch?v=RmNvX2cUl6A&ab_channel=ElectricalandComputerEngineeringatMichigan',
-        'link_about': 'Virtual Reality Human Interface Device for tracking head movement',
+        'link_about': 'Virtual Reality Controller Headset',
         'more_on_topic': 'Giving an intuitive and immersive control for the rescue worker with VR control.',
         'has_more': True,
         'sensors': ['IMU'],
@@ -45,7 +45,7 @@ embedded_initial_posts = [
     },
     {
         'link': 'https://www.lookingbus.com',
-        'link_about': 'Looking Bus',
+        'link_about': 'Looking Bus Beacon',
         'more_on_topic': 'A beacon device that make bus travel easy and safe for visually impaired people.',
         'has_more': True,
         'sensors': ['Bluetooth'],
@@ -54,24 +54,31 @@ embedded_initial_posts = [
         'image_link': 'static/pictures/lookingbus.png',
     },
     {
-        'subclass': 'Resources:',
-        'link': 'https://www.eecs.umich.edu/courses/eecs473/labs.html',
-        'link_about': 'Advanced Embedded Systems',
-        'more_on_topic': 'University of Michigan. ',
-        'has_more': False,
-        'date': 'December 2017',
-    },
-    {
+        'subclass': 'Favorite Tools:',
         'link': 'http://www.kicad-pcb.org/',
         'link_about': 'KiCad PCB Design',
-        'more_on_topic': 'free tool for designing PCBs',
+        'more_on_topic': 'I use KiCAD and Eagle to design the PCBs of the embedded systems.',
         'has_more': False,
         'date': 'December 2017',
     },
     {
         'link': 'https://www.freertos.org/',
-        'link_about': 'freeRTOS',
-        'more_on_topic': 'free real time operating system protected under open source license',
+        'link_about': 'C/C++:',
+        'more_on_topic': 'Fluency and professional experience in Multithreading, Data Structures and Algorithms',
+        'has_more': False,
+        'date': 'December 2017',
+    },
+    {
+        'link': 'https://www.freertos.org/',
+        'link_about': 'FreeRTOS',
+        'more_on_topic': 'Regularly used Real Time Operating Systems for different shipping project to meet tight deadlines and guaranteed reliability.',
+        'has_more': False,
+        'date': 'December 2017',
+    },
+    {
+        'link': 'https://www.freertos.org/',
+        'link_about': 'Communication Protocols',
+        'more_on_topic': 'Utilized I2C, SPI, CAN, Bluetooth and WiFi in shipping projects.',
         'has_more': False,
         'date': 'December 2017',
     }
@@ -81,31 +88,74 @@ embedded_posts = custom_post('Embedded Systems', 'static/pictures/crowdDev.png',
 
 ai_inital_posts = [
     { 
-        'subclass': 'Resources:',
+        'subclass': 'Projects:',
         'ml_class': 'Reinforcement Learning',
-        'link': '',
-        'link_about': '',
-        'more_on_topic': 'To fill in JS apps...',
-                'date': 'December 2017',
+        'link': '#',
+        'link_about': 'Machine Learning',
+        'more_on_topic': 'Coming soon',
+        'date': 'February 2020',
     },
-	{
-        'subclass': 'Resources:',
-		'ml_class': 'Reinforcement Learning',
-		'link': 'https://xaviergeerinck.com/bellman-equations',
-		'link_about': 'Bellman Equations',
-        'more_on_topic': ': Allows us to write an equation that will represent State-Value function as a recursive relationship between value of state and value of its successor state.',
-		'date': 'February 2020',
-	},
+    { 
+        'ml_class': 'Reinforcement Learning',
+        'link': '#',
+        'link_about': 'Generative Adverserial Network',
+        'more_on_topic': 'Coming Soon',
+        'date': 'February 2020',
+    },
+    { 
+        'ml_class': 'Reinforcement Learning',
+        'link': '#',
+        'link_about': 'Deep Neural Network',
+        'more_on_topic': 'Coming soon',
+        'date': 'February 2020',
+    },
 ]
-ai_posts = custom_post('AI/ML', 'static/pictures/aigif.gif', 1, ai_inital_posts)
 
+ai_posts = custom_post('AI/ML', 'static/pictures/aigif.gif', 1, ai_inital_posts)
 app_posts = [
+    { 
+        'subclass': 'Projects:',
+        'link_about': 'Git Journal',
+        'link': 'gitjournal.com',
+        'more_on_topic': 'A version controlled journalling application, built using the MERN stack, that attempts to offer a new kind of writing and authoring experience.',
+        'has_more': True,
+        # 'sensors': ['Poison Gas Sensor', '3D view camera module', 'GPS'],
+        'techs': ['React.js'],
+        'actions': ['MongoDB: primarily used for database management.', 
+			        'ExpressJS: Minimal NodeJS web application framework.', 
+			        'ReactJS: JavaScript library for building user interfaces and front-end components. ', 
+			        'NodeJS: back end runtime environment that execytes javascript code on the back end server.', 
+			        'Redux: Used in combination with ReactJS to manage application state.', 
+			        'DraftJS: To develop a beautiful rich text editor for the best writing and reading experience.'],
+        'date': 'December 2020',
+        # 'image_link': 'static/pictures/insta485.png',
+        # 'image_link1': 'static/pictures/slide.png',
+    },
+    { 
+        'link_about': 'Insta 485',
+        'more_on_topic': 'It is almost instagram, you can create profile, login, logout, upload pictures, see newseed, follow, comment, and like.',
+        'has_more': True,
+        # 'sensors': ['Poison Gas Sensor', '3D view camera module', 'GPS'],
+        'techs': ['Flask', 'Jinja', 'React.js', 'Webpack', 'SQLite'],
+        'actions': ['Flask', 'Jinja', 'SQLite'],
+        'date': 'December 2019',
+        'image_link': 'static/pictures/insta485.png',
+        # 'image_link1': 'static/pictures/slide.png',
+    },
 	{ 
-		'subclass': 'iOS Applications',
-		'link': '',
-		'link_about': '',
-		'more_on_topic': 'To fill in...',
-                'date': 'December 2017',
+        'link': 'https://www.lookingbus.com/',
+        'link_about': 'Looking bus',
+        'more_on_topic': 'An Android application that communicates with street beacon devices to make travel on buses easier and safer for blind or visually impaired people.',
+        'has_more': True,
+        # 'sensors': ['Poison Gas Sensor', '3D view camera module', 'GPS'],
+        'techs': ['Java'],
+        'actions': ['Java','Android Studio'],
+        'date': 'December 2019',
+        # 'image_link': 'static/pictures/insta485.png',
+        # 'actions': ['Flask', 'React.js', 'SQLite', 'Hadoop', 'Socket', 'Multithreading'],
+        # 'date': 'December 2019',
+        # 'image_link': 'static/pictures/insta485.png',
+        # 'image_link1': 'static/pictures/slide.png',
 	}
 ]
 app_posts = custom_post('Software', 'static/pictures/codegif.gif', 1, app_posts)

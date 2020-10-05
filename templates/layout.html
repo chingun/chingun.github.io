@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% block style %}{% endblock %} 
-</head>
-<body>  
-  <!-- Side navigation -->
-  <div class="sidenav">
-    <h1 href="/">CHINGUN KHASAR</h1>
-    <a style='color:#111' href="/home" 
-                    onMouseOver="this.style.color='#660b81'"
-                    onMouseOut="this.style.color='#111'">Home</a>
-    <a class="dropdown-btn">Projects<i class="fa fa-caret-down"></i></a>
-    <div class="dropdown-container">
-      <a style='color:#111' href="/embedded" 
-                    onMouseOver="this.style.color='#660b81'"
-                    onMouseOut="this.style.color='#111'">Embedded Systems</a>
-      <a style='color:#111' href="/ai" 
-                    onMouseOver="this.style.color='#660b81'"
-                    onMouseOut="this.style.color='#111'">Artificial Intelligence</a>
-      <a style='color:#111' href="/apps"  
-                      onMouseOver="this.style.color='#660b81'"
-                      onMouseOut="this.style.color='#111'">Software</a>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block style %}{% endblock %} 
+  </head>
+  <body>  
+    <!-- Side navigation -->
+    <div class="ChingunPage">
+      <div class="sidenav">
+        <h1 href="/">CHINGUN KHASAR</h1>
+        <a style='color:#111' href="/home" 
+                        onMouseOver="this.style.color='#660b81'"
+                        onMouseOut="this.style.color='#111'">Home</a>
+        <a class="dropdown-btn">Projects<i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-container">
+          <a style='color:#111' href="/embedded" 
+                        onMouseOver="this.style.color='#660b81'"
+                        onMouseOut="this.style.color='#111'">Firmware</a>
+      <!--<a style='color:#111' href="/ai" 
+                        onMouseOver="this.style.color='#660b81'"
+                        onMouseOut="this.style.color='#111'">Artificial Intelligence</a> -->
+          <a style='color:#111' href="/apps"  
+                          onMouseOver="this.style.color='#660b81'"
+                          onMouseOut="this.style.color='#111'">Software</a>
+        </div>
+      </div>
+      <div class="main">
+        {% block content %}{% endblock %} 
+        <div class="icons">
+          <a href=mailto:chingun@umich.edu><img src='/static/icons/mail.png' style="width:20px;height:20px;border:0;"></a>
+          <a href="https://github.com/chingun"><img src='/static/icons/git.png' style="width:24px;height:24px;border:0;"></a>
+          <a href="https://www.linkedin.com/in/chingun-khasar-93157a11a"><img src='/static/icons/linkedin.png' style="width:20px;height:20px;border:0;"></a>
+          <a href=https://www.instagram.com/chingunkh/><img src='/static/icons/inst.png' style="width:20px;height:20px;border:0;"></a>
+          <br><br><a style="font-size:12px;color:#a5a5a5;cursor:default"> © All Rights Reserved by Chingun Khasar </a>
+        </div>
+      </div>
     </div>
-  </div>
-  <!-- Contains every main page element -->
-  <div class="main">
-    {% block content %}{% endblock %} 
-    <div class="icons">
-      <a href=mailto:chingun@umich.edu><img src='/static/icons/mail.png' style="width:20px;height:20px;border:0;"></a>
-      <a href="https://github.com/chingun"><img src='/static/icons/git.png' style="width:24px;height:24px;border:0;"></a>
-      <a href="https://www.linkedin.com/in/chingun-khasar-93157a11a"><img src='/static/icons/linkedin.png' style="width:20px;height:20px;border:0;"></a>
-      <a href=https://www.instagram.com/chingunkh/><img src='/static/icons/inst.png' style="width:20px;height:20px;border:0;"></a>
-      <br><br><a style="font-size:12px;color:#a5a5a5;cursor:default"> © All Rights Reserved by Chingun Khasar </a>
-    </div>
-  </div>
-  <script src="static/script/script.js"></script>
-</body>
+    <script src="static/script/script.js"></script>
+  </body>
 </html>

@@ -87,9 +87,47 @@
   </div><br>
   <div style="margin-top:430px">
   <h1> {{ posts.title }} </h1>
-  {% for post in posts.each_posts %}
-
-    <a style="text-decoration:none" href="{{ post.link }}"><u class="first after" style="text-decoration:none" >{{ post.link_about }} </u></a><a>{{post.more_on_topic}} </a><br><br>
-  </div>
+  <a> I played with circuits and programmed since 13 and I love both EE and CS. I find Embedded Systems to be the best of both worlds.</a>
+  {% for post in posts.each_posts %}  
+    {% if post.subclass is defined %}
+    <h2> {{ post.subclass }} </h2>
+    {% endif %}
+    {% if post.has_more %}
+    {% if post.subclass is not defined %} <br> {% endif %}
+    <a class="dropdown-btn" style="display:inline !important;text-align:left !important;"><u class="first after" style="text-decoration:none">{{post.link_about}}</u><div style="color:black !important; display: inline;">: {{post.more_on_topic}}</div></a>
+      <div class="dropdown-container">
+      {% if post.actions is defined %}
+        {% if post.image_link is defined %}
+          <img src="{{post.image_link}}" style="height:200px;"><br>
+        {% endif %}
+          <a>Developed:</a><br>
+        {% for act in post.actions %}  
+          <li><a> {{ act }} </a></li> 
+        {% endfor %}
+      {% endif %}
+      {% if post.sensors is defined %}
+        <a> Technologies used:</a><br>
+        {% for sense in post.sensors %}  
+          <li><a> {{ sense }} </a></li> 
+        {% endfor %}
+      {% endif %}
+      {% if post.sensors is defined %}
+        <a>Communication Protocols:</a><br>
+        {% for tech in post.techs %}  
+          <li><a> {{ tech }} </a></li> 
+        {% endfor %}
+        </div>
+      {% endif %}
+      {% else %}
+        {% if post.subclass is not defined %} <br> {% endif %}
+        <a style="text-decoration:none" href="{{ post.link }}">
+          <u class="first after" style="text-decoration:none" href="{{post.link}}"> 
+            {{post.link_about}}
+          </u>
+        </a>
+        <a>
+          : {{post.more_on_topic}}
+        </a>
+      {% endif %}<br>
   {% endfor %}
 {% endblock %}
