@@ -20,7 +20,7 @@ body {
   width: 280px; /* Set the width of the sidebar */
   height: 100%;
   background-color: white; /* White */
-  margin-top: 40px;  /* Magic! */   
+  margin-top: 5%;  /* Magic! */   
 }
 
 .sidenav h1 {
@@ -80,7 +80,7 @@ body {
   height: auto;  /*Full-height: remove this if you want "auto" height */
   color: #111;
   background-color: white; /* White */
-  margin-top: 10%;
+  margin-top: 4%;
   margin-left: 50px;
   margin-right: 50px;
   overflow: scroll;
