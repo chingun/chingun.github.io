@@ -80,6 +80,7 @@ body {
   height: auto;  /*Full-height: remove this if you want "auto" height */
   color: #111;
   background-color: white; /* White */
+  margin-top: 10%;
   margin-left: 50px;
   margin-right: 50px;
   overflow: scroll;
