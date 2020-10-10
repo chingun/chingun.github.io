@@ -63,7 +63,7 @@ embedded_initial_posts = [
     },
     {
         'link': 'https://www.freertos.org/',
-        'link_about': 'C/C++:',
+        'link_about': 'C/C++',
         'more_on_topic': 'Fluency and professional experience in Multithreading, Data Structures and Algorithms',
         'has_more': False,
         'date': 'December 2017',
